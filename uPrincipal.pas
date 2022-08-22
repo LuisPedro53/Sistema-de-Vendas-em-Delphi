@@ -48,7 +48,7 @@ implementation
 {$R *.dfm}
 
 uses uCadCategorias, cCadCategoria, cCadCliente, uCadCliente, uEnum,
-  uTelaHeranca, cCadProduto, uCadProdutos, Enter;
+  uTelaHeranca, cCadProduto, uCadProdutos, dmDados;
 
 
 

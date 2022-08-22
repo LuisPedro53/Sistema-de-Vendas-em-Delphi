@@ -19,7 +19,7 @@ object dtmPrincipal: TdtmPrincipal
     Protocol = 'mssql'
     LibraryLocation = 
       'C:\Users\luisp\OneDrive\'#193'rea de Trabalho\DELPHI 2\SISTEMA2 - VEN' +
-      'DAS\ntwdblib.dll'
+      'DAS\Sistema-de-Vendas-em-Delphi\ntwdblib.dll'
     Left = 192
     Top = 48
   end
