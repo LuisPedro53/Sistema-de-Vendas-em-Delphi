@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus,uDTMConexao,Enter,
   Vcl.ExtCtrls, QuickRpt, JvComponentBase, JvgCrossTable, JvBaseDlg,
   JvJVCLAboutForm, Vcl.StdCtrls, Vcl.Mask, RxToolEdit, RLReport, frxDock, frxClass, JvExStdCtrls, JvEdit,
-  JvDBSearchEdit;
+  JvDBSearchEdit,ufrmAtualizaDB;
 
 type
   TfrmPrincipal = class(TForm)
@@ -36,6 +36,7 @@ type
 
   private
     TeclaEnter : TMREnter;
+    procedure AtualizacaoBancoDados(aForm:TfrmAtualizaDB);
   public
     { Public declarations }
   end;
@@ -79,6 +80,9 @@ end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
+frmAtualizaDB:=TfrmAtualizaDB.Create(self);
+frmAtualizaDB.Show;
+frmAtualizaDB.Refresh;
 dtmPrincipal := TdtmPrincipal.Create(Self);
 with dtmPrincipal.ConexaoDB do begin  //AQUI NÃO PRECISA COLOCAR 'dtmPrincipal.ConexaoDB' no inicio de cada item abaixo.
   SQLHourGlass:=true;
@@ -91,6 +95,8 @@ with dtmPrincipal.ConexaoDB do begin  //AQUI NÃO PRECISA COLOCAR 'dtmPrincipal.C
   Database :='vendas';
   Connected :=True ;
 end;
+AtualizacaoBancoDados(frmAtualizaDB);
+frmAtualizaDB.Free;
 TeclaEnter := TMREnter.Create(Self);
 TeclaEnter.FocusEnabled := true;
 TeclaEnter.FocusColor:=clInfoBk;
@@ -108,6 +114,39 @@ begin
     frmCadProdutos:=TfrmCadProdutos.Create(self);
     frmCadProdutos.ShowModal;
     frmCadProdutos.Release;
+end;
+
+procedure TfrmPrincipal.AtualizacaoBancoDados(aForm:TfrmAtualizaDB);
+begin
+  aForm.chkConexao.Checked:=True;
+  aForm.Refresh;
+
+  dtmPrincipal.QryScripCategorias.ExecSQL;
+  aForm.chkCategoria.Checked:=True;
+  aForm.Refresh;
+  Sleep(500);
+
+  dtmPrincipal.QryScripProdutos.ExecSQL;
+  aForm.chkProdutos.Checked:=True;
+  aForm.Refresh;
+  Sleep(500);
+
+  dtmPrincipal.QryScripVendas.ExecSQL;
+  aForm.chkVendas.Checked:=True;
+  aForm.Refresh;
+  Sleep(500);
+
+  dtmPrincipal.QryScripClientes.ExecSQL;
+  aForm.chkClientes.Checked:=True;
+  aForm.Refresh;
+  Sleep(500);
+
+  dtmPrincipal.QryScripItensVendas.ExecSQL;
+  aForm.chkItensVendas.Checked:=True;
+  aForm.Refresh;
+  Sleep(500);
+
+
 end;
 
 end.
