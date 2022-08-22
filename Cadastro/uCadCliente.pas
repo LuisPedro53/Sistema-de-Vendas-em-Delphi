@@ -98,7 +98,7 @@ begin
        edtTelefone.Text :=oCliente.telefone;
        edtDataNascimento.Date:=oCliente.dataNascimento;
        edtNumero.Text  :=oCliente.numero;
-    //   edtCPF.text  :=oCliente.cpf;
+       edtCPF.text  :=oCliente.cpf;
     end
   else begin
     btnCancelar.Click;
@@ -148,7 +148,7 @@ begin
   oCliente.dataNascimento :=edtDataNascimento.Date;
   oCliente.numero         :=edtNumero.Text;
   oCliente.estado         :=edtEstado.Text;
- // oCliente.cpf            :=edtCPF.Text;
+  oCliente.cpf            :=edtCPF.Text;
 
   if (EstadoDoCadastro=ecInserir) then
      Result:=oCliente.Inserir

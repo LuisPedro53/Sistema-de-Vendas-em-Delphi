@@ -26,7 +26,7 @@ type
     F_cep: String;
     F_telefone: string;
     F_email: string;
-    //F_cpf: string;
+    F_cpf: string;
     F_dataNascimento: TDateTime;
 
   public
@@ -47,7 +47,7 @@ type
     property telefone      :string     read F_telefone       write F_telefone;
     property email         :string     read F_email          write F_email;
     property numero        :string     read F_numero         write F_numero;
-    //property cpf        :string     read F_cpf         write F_cpf;
+    property cpf            :string     read F_cpf            write F_cpf;
     property dataNascimento:TDateTime  read F_dataNascimento write F_dataNascimento;
   end;
 
@@ -226,7 +226,7 @@ begin
                 '       email, '+
                 '       datanascimento, '+
                 '       numero         '+
-   //             '       cpf            '+
+                '       cpf            '+
                 '  FROM clientes '+
                 ' WHERE clienteId=:clienteId');
     Qry.ParamByName('clienteId').AsInteger:=id;
@@ -244,7 +244,7 @@ begin
       Self.F_email         := Qry.FieldByName('email').AsString;
       Self.F_dataNascimento:= Qry.FieldByName('datanascimento').AsDateTime;
       Self.F_numero         :=Qry.FieldByName('numero').AsString;
-      //Self.F_cpf         :=Qry.FieldByName('cpf').AsString;
+      Self.F_cpf         :=Qry.FieldByName('cpf').AsString;
 
 
     Except

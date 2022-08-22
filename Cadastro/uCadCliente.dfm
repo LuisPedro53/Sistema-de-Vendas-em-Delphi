@@ -9,7 +9,7 @@ inherited frmCadCliente: TfrmCadCliente
   inherited pnlRodaPe: TPanel
     Top = 509
     Width = 760
-    ExplicitTop = 537
+    ExplicitTop = 509
     ExplicitWidth = 760
     inherited btnFechar: TBitBtn
       Left = 681
@@ -21,10 +21,12 @@ inherited frmCadCliente: TfrmCadCliente
     Height = 509
     ActivePage = TabManutencao
     ExplicitWidth = 760
-    ExplicitHeight = 537
+    ExplicitHeight = 509
     inherited TabListagem: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
       ExplicitWidth = 752
-      ExplicitHeight = 509
+      ExplicitHeight = 481
       inherited pnlListagemTopo: TPanel
         Width = 752
         ExplicitWidth = 752
@@ -66,7 +68,7 @@ inherited frmCadCliente: TfrmCadCliente
     end
     inherited TabManutencao: TTabSheet
       ExplicitWidth = 752
-      ExplicitHeight = 509
+      ExplicitHeight = 481
       object GroupBox1: TGroupBox
         Left = -4
         Top = 0
