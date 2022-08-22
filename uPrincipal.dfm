@@ -2,8 +2,8 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Menu Principal'
-  ClientHeight = 469
-  ClientWidth = 878
+  ClientHeight = 433
+  ClientWidth = 812
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,7 +20,8 @@ object frmPrincipal: TfrmPrincipal
   PixelsPerInch = 96
   TextHeight = 13
   object mainPrincipal: TMainMenu
-    Left = 728
+    Left = 88
+    Top = 24
     object Cadastro1: TMenuItem
       Tag = 1
       Caption = 'Cadastro'
