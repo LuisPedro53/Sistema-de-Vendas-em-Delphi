@@ -83,6 +83,7 @@ function TfrmCadCliente.Apagar: Boolean;
 end;
 
 procedure TfrmCadCliente.btnAlterarClick(Sender: TObject);
+var test1: string;
 begin
   //if oCliente.Selecionar(QryListagem.FieldByName('clienteId').AsInteger) then
       if  oCliente.Selecionar(QryListagemclienteId.AsInteger) then
