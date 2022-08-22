@@ -88,7 +88,7 @@ begin
   //if oCliente.Selecionar(QryListagem.FieldByName('clienteId').AsInteger) then
       if  oCliente.Selecionar(QryListagemclienteId.AsInteger) then
     begin
-    ShowMessage('teste');
+
        edtClienteId.Text:=IntToStr(oCliente.codigo);
        edtNome.Text     :=oCliente.nome;
        edtCEP.Text      :=oCliente.cep;
@@ -99,6 +99,7 @@ begin
        edtDataNascimento.Date:=oCliente.dataNascimento;
        edtNumero.Text  :=oCliente.numero;
        edtCPF.text  :=oCliente.cpf;
+       edtEstado.Text := oCliente.estado;
     end
   else begin
     btnCancelar.Click;

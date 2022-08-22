@@ -117,8 +117,8 @@ begin
                 '       ,telefone       =:telefone '+
                 '       ,email          =:email '+
                 '       ,dataNascimento =:dataNascimento '+
-                '       ,cpf            :=cpf'+
-                '       ,numero         :=numero'+
+                '       ,cpf            =:cpf'+
+                '       ,numero         =:numero'+
                 ' WHERE clienteId=:clienteId ');
     Qry.ParamByName('clienteId').AsInteger       :=Self.F_clienteId;
     Qry.ParamByName('nome').AsString             :=Self.F_nome;
@@ -131,7 +131,7 @@ begin
     Qry.ParamByName('email').AsString            :=Self.F_email;
     Qry.ParamByName('dataNascimento').AsDateTime :=Self.F_dataNascimento;
     Qry.ParamByName('numero').AsString          :=Self.F_numero;
-    //Qry.ParamByName('cpf').AsString          :=Self.F_cpf;
+    Qry.ParamByName('cpf').AsString          :=Self.F_cpf;
 
 
     Try
@@ -166,7 +166,7 @@ begin
                 '                      telefone, '+
                 '                      email, '+
                '                      numero,'+
-   //            '                      cpf,'    +
+               '                      cpf,'    +
                 '                      datanascimento) '+
                 ' VALUES              (:nome, '+
                 '                      :endereco, '+
@@ -177,7 +177,7 @@ begin
                 '                      :telefone, '+
                 '                      :email, '+
                '                      :numero,'+
-         //      '                      :cpf,'+
+               '                      :cpf,'+
                 '                      :datanascimento)' );
 
     Qry.ParamByName('nome').AsString             :=Self.F_nome;
@@ -190,7 +190,7 @@ begin
     Qry.ParamByName('email').AsString            :=Self.F_email;
     Qry.ParamByName('dataNascimento').AsDateTime :=Self.F_dataNascimento;
     Qry.ParamByName('numero').AsString         :=Self.F_numero;
-   // Qry.ParamByName('cpf').AsString         :=Self.F_cpf;
+    Qry.ParamByName('cpf').AsString         :=Self.F_cpf;
 
     Try
       ConexaoDB.StartTransaction;
@@ -225,8 +225,8 @@ begin
                 '       telefone, '+
                 '       email, '+
                 '       datanascimento, '+
+                  '       cpf         ,   '+
                 '       numero         '+
-                '       cpf            '+
                 '  FROM clientes '+
                 ' WHERE clienteId=:clienteId');
     Qry.ParamByName('clienteId').AsInteger:=id;
