@@ -26,12 +26,14 @@ type
     Produto2: TMenuItem;
     N3: TMenuItem;
     VendasporData1: TMenuItem;
+    Vendas1: TMenuItem;
     procedure mnuFecharClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Categoria1Click(Sender: TObject);
     procedure Cliente1Click(Sender: TObject);
     procedure produto1Click(Sender: TObject);
+    procedure Vendas1Click(Sender: TObject);
 
 
   private
@@ -49,7 +51,7 @@ implementation
 {$R *.dfm}
 
 uses uCadCategorias, cCadCategoria, cCadCliente, uCadCliente, uEnum,
-  uTelaHeranca, cCadProduto, uCadProdutos, dmDados;
+  uTelaHeranca, cCadProduto, uCadProdutos, dmDados, uProVendas, uDTMVenda;
 
 
 
@@ -114,6 +116,13 @@ begin
     frmCadProdutos:=TfrmCadProdutos.Create(self);
     frmCadProdutos.ShowModal;
     frmCadProdutos.Release;
+end;
+
+procedure TfrmPrincipal.Vendas1Click(Sender: TObject);
+begin
+    frmVendas := TfrmVendas.Create(self);
+    frmVendas.ShowModal;
+    frmVendas.Release;
 end;
 
 procedure TfrmPrincipal.AtualizacaoBancoDados(aForm:TfrmAtualizaDB);

@@ -40,8 +40,8 @@ object dtmPrincipal: TdtmPrincipal
       ')'
       'end')
     Params = <>
-    Left = 400
-    Top = 88
+    Left = 368
+    Top = 48
   end
   object QryScripVendas: TZQuery
     Connection = ConexaoDB
@@ -76,7 +76,7 @@ object dtmPrincipal: TdtmPrincipal
       'end')
     Params = <>
     Left = 280
-    Top = 32
+    Top = 72
   end
   object QryScripProdutos: TZQuery
     Connection = ConexaoDB
@@ -96,8 +96,8 @@ object dtmPrincipal: TdtmPrincipal
       ')'
       'end')
     Params = <>
-    Left = 288
-    Top = 144
+    Left = 192
+    Top = 160
   end
   object QryScripClientes: TZQuery
     Connection = ConexaoDB
@@ -121,7 +121,7 @@ object dtmPrincipal: TdtmPrincipal
       ')'
       'end')
     Params = <>
-    Left = 296
-    Top = 88
+    Left = 192
+    Top = 80
   end
 end

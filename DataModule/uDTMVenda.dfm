@@ -53,18 +53,26 @@ object dtmVenda: TdtmVenda
       FieldName = 'valor'
     end
   end
+  object dtsCliente: TDataSource
+    DataSet = QryCliente
+    Left = 336
+    Top = 152
+  end
+  object dtsProdutos: TDataSource
+    DataSet = QryProdutos
+    Left = 280
+    Top = 152
+  end
+  object dtsItensVendas: TDataSource
+    DataSet = cdsItensVendas
+    Left = 176
+    Top = 144
+  end
   object cdsItensVendas: TClientDataSet
-    PersistDataPacket.Data = {
-      8F0000009619E0BD0100000018000000050000000000030000008F000970726F
-      6475746F496404000100000000000B4E6F6D6550726F6475746F010049000000
-      0100055749445448020002003C000A7175616E74696461646508000400000000
-      000D76616C6F72556E69746172696F08000400000000001176616C6F72546F74
-      616C50726F6475746F08000400000000000000}
-    Active = True
     Aggregates = <>
     Params = <>
-    Left = 208
-    Top = 208
+    Left = 80
+    Top = 184
     object cdsItensVendasprodutoId: TIntegerField
       FieldName = 'produtoId'
     end
@@ -81,25 +89,10 @@ object dtmVenda: TdtmVenda
     object cdsItensVendasvalorTotalProduto: TFloatField
       FieldName = 'valorTotalProduto'
     end
-    object cdsItensVendasValorTotalVenda: TAggregateField
-      FieldName = 'ValorTotalVenda'
+    object cdsItensVendasvalorTotalVenda: TAggregateField
+      FieldName = 'valorTotalVenda'
       DisplayName = ''
       Expression = 'SUM(ValorTotalProduto)'
     end
-  end
-  object dtsCliente: TDataSource
-    DataSet = QryCliente
-    Left = 336
-    Top = 152
-  end
-  object dtsProdutos: TDataSource
-    DataSet = QryProdutos
-    Left = 280
-    Top = 152
-  end
-  object dtsItensVendas: TDataSource
-    DataSet = cdsItensVendas
-    Left = 200
-    Top = 152
   end
 end
