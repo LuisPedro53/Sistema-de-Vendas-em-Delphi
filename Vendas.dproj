@@ -142,7 +142,7 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="Processos\uProVendas.pas">
-            <Form>frmTelaHeranca1</Form>
+            <Form>frmVendas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

@@ -75,8 +75,8 @@ object dtmPrincipal: TdtmPrincipal
       ')'
       'end')
     Params = <>
-    Left = 304
-    Top = 24
+    Left = 280
+    Top = 32
   end
   object QryScripProdutos: TZQuery
     Connection = ConexaoDB

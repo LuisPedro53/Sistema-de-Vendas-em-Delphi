@@ -16,7 +16,7 @@ uses
   dmDados in 'DataModule\dmDados.pas' {DataModule1: TDataModule},
   ufrmAtualizaDB in 'DataModule\ufrmAtualizaDB.pas' {frmAtualizaDB},
   uDTMVenda in 'DataModule\uDTMVenda.pas' {dtmVenda: TDataModule},
-  uProVendas in 'Processos\uProVendas.pas' {frmTelaHeranca1};
+  uProVendas in 'Processos\uProVendas.pas' {frmVendas};
 
 {$R *.res}
 
@@ -25,6 +25,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TdtmVenda, dtmVenda);
-  Application.CreateForm(TfrmTelaHeranca1, frmTelaHeranca1);
+  Application.CreateForm(TfrmVendas, frmVendas);
   Application.Run;
 end.

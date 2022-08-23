@@ -19,6 +19,7 @@ inherited frmCadCliente: TfrmCadCliente
   inherited pgcPrincipal: TPageControl
     Width = 760
     Height = 509
+    ActivePage = TabManutencao
     ExplicitWidth = 760
     ExplicitHeight = 509
     inherited TabListagem: TTabSheet
@@ -122,7 +123,7 @@ inherited frmCadCliente: TfrmCadCliente
           Width = 134
           Height = 21
           Date = 44792.000000000000000000
-          Time = 0.475491400466126000
+          Time = 0.475491400466125900
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlue
           Font.Height = -11
