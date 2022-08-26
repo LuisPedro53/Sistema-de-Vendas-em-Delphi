@@ -1,30 +1,31 @@
-object DataModule1: TDataModule1
+object DmDados: TDmDados
   OldCreateOrder = False
-  Height = 409
-  Width = 548
+  Height = 432
+  Width = 549
   object RESTClient1: TRESTClient
     Params = <>
-    Left = 56
-    Top = 48
+    HandleRedirects = True
+    Left = 80
+    Top = 40
   end
   object RESTRequest1: TRESTRequest
     Client = RESTClient1
     Params = <>
     Response = RESTResponse1
     SynchronizedEvents = False
-    Left = 136
+    Left = 184
     Top = 56
   end
   object RESTResponse1: TRESTResponse
-    Left = 256
-    Top = 56
+    Left = 120
+    Top = 128
   end
   object RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter
     Dataset = FDMemTable1
     FieldDefs = <>
     Response = RESTResponse1
-    Left = 40
-    Top = 128
+    Left = 248
+    Top = 144
   end
   object FDMemTable1: TFDMemTable
     FetchOptions.AssignedValues = [evMode]
@@ -33,7 +34,7 @@ object DataModule1: TDataModule1
     ResourceOptions.SilentMode = True
     UpdateOptions.AssignedValues = [uvCheckRequired]
     UpdateOptions.CheckRequired = False
-    Left = 232
-    Top = 160
+    Left = 112
+    Top = 264
   end
 end

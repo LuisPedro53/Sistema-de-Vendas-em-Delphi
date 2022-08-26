@@ -24,7 +24,6 @@ object frmTelaHeranca: TfrmTelaHeranca
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitWidth = 755
     object btnNovo: TBitBtn
       Left = 4
       Top = 6
@@ -250,10 +249,8 @@ object frmTelaHeranca: TfrmTelaHeranca
     ActivePage = TabListagem
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 755
     object TabListagem: TTabSheet
       Caption = 'Listagem'
-      ExplicitWidth = 747
       object pnlListagemTopo: TPanel
         Left = 0
         Top = 0
@@ -261,7 +258,6 @@ object frmTelaHeranca: TfrmTelaHeranca
         Height = 65
         Align = alTop
         TabOrder = 0
-        ExplicitWidth = 747
         object lblIndice: TLabel
           Left = 13
           Top = 8
@@ -336,7 +332,6 @@ object frmTelaHeranca: TfrmTelaHeranca
     object TabManutencao: TTabSheet
       Caption = 'Manuten'#231#227'o'
       ImageIndex = 1
-      ExplicitWidth = 747
     end
   end
   object dstListagem: TDataSource

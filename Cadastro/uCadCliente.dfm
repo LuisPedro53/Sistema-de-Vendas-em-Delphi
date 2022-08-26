@@ -23,6 +23,8 @@ inherited frmCadCliente: TfrmCadCliente
     ExplicitWidth = 760
     ExplicitHeight = 509
     inherited TabListagem: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
       ExplicitWidth = 752
       ExplicitHeight = 481
       inherited pnlListagemTopo: TPanel
@@ -406,6 +408,7 @@ inherited frmCadCliente: TfrmCadCliente
     Top = 16
   end
   inherited QryListagem: TZQuery
+    Active = True
     SQL.Strings = (
       'SELECT clienteId'
       '      ,nome'

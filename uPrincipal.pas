@@ -51,7 +51,7 @@ implementation
 {$R *.dfm}
 
 uses uCadCategorias, cCadCategoria, cCadCliente, uCadCliente, uEnum,
-  uTelaHeranca, cCadProduto, uCadProdutos, dmDados, uProVendas, uDTMVenda;
+  uTelaHeranca, cCadProduto, uCadProdutos, uProVendas, uDTMVenda;
 
 
 
@@ -133,27 +133,27 @@ begin
   dtmPrincipal.QryScripCategorias.ExecSQL;
   aForm.chkCategoria.Checked:=True;
   aForm.Refresh;
-  Sleep(500);
+  Sleep(200);
 
   dtmPrincipal.QryScripProdutos.ExecSQL;
   aForm.chkProdutos.Checked:=True;
   aForm.Refresh;
-  Sleep(500);
+  Sleep(200);
 
   dtmPrincipal.QryScripVendas.ExecSQL;
   aForm.chkVendas.Checked:=True;
   aForm.Refresh;
-  Sleep(500);
+  Sleep(200);
 
   dtmPrincipal.QryScripClientes.ExecSQL;
   aForm.chkClientes.Checked:=True;
   aForm.Refresh;
-  Sleep(500);
+  Sleep(200);
 
   dtmPrincipal.QryScripItensVendas.ExecSQL;
   aForm.chkItensVendas.Checked:=True;
   aForm.Refresh;
-  Sleep(500);
+  Sleep(200);
 
 
 end;

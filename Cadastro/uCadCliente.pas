@@ -52,8 +52,8 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnNovoClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
-    procedure ProcurarCepClick(Sender: TObject);
     procedure PopupMenu1Popup(Sender: TObject);
+    procedure ProcurarCepClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,7 +70,7 @@ implementation
 
 {$R *.dfm}
 
-uses cCadCategoria, Enter, uCadCategorias, uDTMConexao, uPrincipal, dmDados;
+uses cCadCategoria, Enter, uCadCategorias, uDTMConexao, uPrincipal, unDados;
 
 
 { TfrmCadCliente }
@@ -195,15 +195,22 @@ end;
 
 procedure TfrmCadCliente.ProcurarCepClick(Sender: TObject);
 begin
-  inherited;
-  begin
-DataModule1.RESTClient1.BaseURL:= 'https://viacep.com.br/ws/'+edtCep.text+'/json/';
-DataModule1.RESTRequest1.Execute;
-edtEndereco.Text := DataModule1.FDMemTable1.FieldByName('logradouro').AsString;
-edtEstado.Text := DataModule1.FDMemTable1.FieldByName('uf').AsString;
-edtCidade.Text := DataModule1.FDMemTable1.FieldByName('localidade').AsString;
-edtBairro.Text := DataModule1.FDMemTable1.FieldByName('bairro').AsString;
-end;
+   if edtCEP.Text = EmptyStr then
+   begin
+     ShowMessage('Informe um CEP');
+   end
+   else
+   begin
+   DmDados.RESTClient1.BaseURL := 'https://viacep.com.br/ws/'+edtCEP.Text+'/json/';
+   DmDados.RESTRequest1.Execute;
+   //ShowMessage(DmDados.RESTResponse1.Content);
+   edtEndereco.Text := DmDados.FDMemTable1.FieldByName('logradouro').AsString;
+   edtBairro.Text := DmDados.FDMemTable1.FieldByName('bairro').AsString;
+   edtCidade.Text := DmDados.FDMemTable1.FieldByName('localidade').AsString;
+   edtEstado.Text := DmDados.FDMemTable1.FieldByName('uf').AsString;
+   end
+
+
 end;
 
 end.

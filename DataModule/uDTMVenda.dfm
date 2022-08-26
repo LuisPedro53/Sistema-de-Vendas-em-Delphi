@@ -6,6 +6,7 @@ object dtmVenda: TdtmVenda
   Width = 540
   object QryCliente: TZQuery
     Connection = dtmPrincipal.ConexaoDB
+    Active = True
     SQL.Strings = (
       'SELECT clienteId, nome '
       'from clientes')
@@ -25,6 +26,7 @@ object dtmVenda: TdtmVenda
   end
   object QryProdutos: TZQuery
     Connection = dtmPrincipal.ConexaoDB
+    Active = True
     SQL.Strings = (
       'SELECT produtoId,'
       '             valor,'
