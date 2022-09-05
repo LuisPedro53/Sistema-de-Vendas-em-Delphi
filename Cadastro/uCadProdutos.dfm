@@ -5,13 +5,6 @@ inherited frmCadProdutos: TfrmCadProdutos
   inherited pgcPrincipal: TPageControl
     ActivePage = TabManutencao
     inherited TabListagem: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 570
-      ExplicitHeight = 382
-      inherited pnlListagemTopo: TPanel
-        ExplicitWidth = 570
-      end
       inherited grdListagem: TDBGrid
         DataSource = dstListagem
         Columns = <

@@ -9,17 +9,23 @@ inherited frmVendas: TfrmVendas
   inherited pnlRodaPe: TPanel
     Top = 579
     Width = 880
+    ExplicitTop = 579
+    ExplicitWidth = 880
   end
   inherited pgcPrincipal: TPageControl
     Width = 880
     Height = 579
     ActivePage = TabManutencao
-    ExplicitLeft = 1
-    ExplicitWidth = 882
+    ExplicitWidth = 880
     ExplicitHeight = 579
     inherited TabListagem: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 872
+      ExplicitHeight = 551
       inherited pnlListagemTopo: TPanel
         Width = 872
+        ExplicitWidth = 872
       end
       inherited grdListagem: TDBGrid
         Width = 872
@@ -59,8 +65,8 @@ inherited frmVendas: TfrmVendas
       end
     end
     inherited TabManutencao: TTabSheet
-      ExplicitWidth = 862
-      ExplicitHeight = 121
+      ExplicitWidth = 872
+      ExplicitHeight = 551
       object Panel4: TPanel
         Left = 0
         Top = -2
@@ -188,8 +194,8 @@ inherited frmVendas: TfrmVendas
           Top = 24
           Width = 134
           Height = 21
-          Date = 44792.475491400470000000
-          Time = 44792.475491400470000000
+          Date = 44792.000000000000000000
+          Time = 0.475491400473401900
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlue
           Font.Height = -11
@@ -286,7 +292,7 @@ inherited frmVendas: TfrmVendas
           Font.Style = [fsBold]
           ParentFont = False
         end
-        object edtValor: TCurrencyEdit
+        object edtValorTotal: TCurrencyEdit
           Left = 701
           Top = 15
           Width = 151
@@ -310,13 +316,14 @@ inherited frmVendas: TfrmVendas
         Align = alCustom
         BorderStyle = bsSingle
         TabOrder = 2
-        object DBGrid1: TDBGrid
+        object dbGridItenVendas: TDBGrid
           Left = 1
           Top = 1
           Width = 867
           Height = 357
           Align = alClient
           DataSource = dstListagem
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgCancelOnExit]
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
