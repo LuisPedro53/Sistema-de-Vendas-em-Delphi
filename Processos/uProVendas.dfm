@@ -11,6 +11,10 @@ inherited frmVendas: TfrmVendas
     Width = 880
     ExplicitTop = 579
     ExplicitWidth = 880
+    inherited btnFechar: TBitBtn
+      Left = 799
+      ExplicitLeft = 799
+    end
   end
   inherited pgcPrincipal: TPageControl
     Width = 880
@@ -65,6 +69,8 @@ inherited frmVendas: TfrmVendas
       end
     end
     inherited TabManutencao: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
       ExplicitWidth = 872
       ExplicitHeight = 551
       object Panel4: TPanel
@@ -122,7 +128,7 @@ inherited frmVendas: TfrmVendas
           Height = 13
           Caption = 'Quantidade'
         end
-        object BitBtn1: TBitBtn
+        object btnAdcionar: TBitBtn
           Left = 710
           Top = 75
           Width = 75
@@ -155,7 +161,8 @@ inherited frmVendas: TfrmVendas
             CF871DCF871DCE861DCC831CCC821CCA801BC87D1BC67A1AC47719C37419C172
             17BF6F17FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
             00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
-          TabOrder = 0
+          TabOrder = 7
+          OnClick = btnAdcionarClick
         end
         object edtTotalProduto: TCurrencyEdit
           Left = 583
@@ -165,7 +172,7 @@ inherited frmVendas: TfrmVendas
           TabStop = False
           DisplayFormat = ' ,0.00;- ,0.00'
           ParentColor = True
-          TabOrder = 1
+          TabOrder = 6
         end
         object edtVendaId: TLabeledEdit
           Tag = 1
@@ -179,7 +186,7 @@ inherited frmVendas: TfrmVendas
           Enabled = False
           MaxLength = 10
           NumbersOnly = True
-          TabOrder = 2
+          TabOrder = 0
         end
         object edtQuantidade: TCurrencyEdit
           Left = 456
@@ -187,7 +194,9 @@ inherited frmVendas: TfrmVendas
           Width = 121
           Height = 21
           DisplayFormat = ' ,0.00;- ,0.00'
-          TabOrder = 3
+          TabOrder = 5
+          OnEnter = edtQuantidadeEnter
+          OnExit = edtQuantidadeExit
         end
         object edtDataVenda: TJvDateTimePicker
           Left = 552
@@ -202,10 +211,10 @@ inherited frmVendas: TfrmVendas
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-          TabOrder = 4
+          TabOrder = 2
           DropDownDate = 44792.000000000000000000
         end
-        object BitBtn2: TBitBtn
+        object btnApagarItem: TBitBtn
           Left = 791
           Top = 75
           Width = 75
@@ -238,7 +247,7 @@ inherited frmVendas: TfrmVendas
             FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
             FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
             00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
-          TabOrder = 5
+          TabOrder = 8
         end
         object lkpCliente: TDBLookupComboBox
           Left = 132
@@ -249,7 +258,7 @@ inherited frmVendas: TfrmVendas
           KeyField = 'clienteId'
           ListField = 'nome'
           ListSource = dtmVenda.dtsCliente
-          TabOrder = 6
+          TabOrder = 1
         end
         object lkpProduto: TDBLookupComboBox
           Left = 5
@@ -260,15 +269,16 @@ inherited frmVendas: TfrmVendas
           KeyField = 'produtoId'
           ListField = 'nome'
           ListSource = dtmVenda.dtsProdutos
-          TabOrder = 7
+          TabOrder = 3
+          OnExit = lkpProdutoExit
         end
-        object edtValoUnitario: TCurrencyEdit
+        object edtValorUnitario: TCurrencyEdit
           Left = 329
           Top = 77
           Width = 121
           Height = 21
           DisplayFormat = ' ,0.00;- ,0.00'
-          TabOrder = 8
+          TabOrder = 4
         end
       end
       object Panel3: TPanel
