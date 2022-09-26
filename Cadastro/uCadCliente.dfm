@@ -19,12 +19,9 @@ inherited frmCadCliente: TfrmCadCliente
   inherited pgcPrincipal: TPageControl
     Width = 760
     Height = 509
-    ActivePage = TabManutencao
     ExplicitWidth = 760
     ExplicitHeight = 509
     inherited TabListagem: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 752
       ExplicitHeight = 481
       inherited pnlListagemTopo: TPanel
@@ -67,8 +64,6 @@ inherited frmCadCliente: TfrmCadCliente
       end
     end
     inherited TabManutencao: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 752
       ExplicitHeight = 481
       object GroupBox1: TGroupBox

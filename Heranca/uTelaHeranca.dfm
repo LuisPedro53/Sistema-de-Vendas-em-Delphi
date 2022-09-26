@@ -267,7 +267,7 @@ object frmTelaHeranca: TfrmTelaHeranca
         end
         object btnPesquisar: TBitBtn
           Left = 423
-          Top = 28
+          Top = 24
           Width = 90
           Height = 20
           Caption = '&Pesquisar'

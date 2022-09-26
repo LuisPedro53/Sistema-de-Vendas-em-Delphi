@@ -319,7 +319,7 @@ end;
 
 procedure TfrmTelaHeranca.mskPesquisarChange(Sender: TObject);
 begin
-   QryListagem.Locate(IndiceAtual, TMaskEdit(Sender).Text,[loPartialKey]);
+   QryListagem.Locate(IndiceAtual,TMaskEdit(Sender).Text,[loPartialKey]);
 end;
 
 procedure TfrmTelaHeranca.btnNovoClick(Sender: TObject);

@@ -6,7 +6,6 @@ inherited frmCadCategoria: TfrmCadCategoria
     TabOrder = 1
   end
   inherited pgcPrincipal: TPageControl
-    ActivePage = TabManutencao
     TabOrder = 0
     inherited TabListagem: TTabSheet
       inherited pnlListagemTopo: TPanel
