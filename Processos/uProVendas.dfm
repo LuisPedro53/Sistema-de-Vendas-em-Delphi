@@ -203,8 +203,8 @@ inherited frmVendas: TfrmVendas
           Top = 24
           Width = 134
           Height = 21
-          Date = 44792.000000000000000000
-          Time = 0.475491400473401900
+          Date = 44792.475491400470000000
+          Time = 44792.475491400470000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlue
           Font.Height = -11
@@ -248,6 +248,7 @@ inherited frmVendas: TfrmVendas
             FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
             00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
           TabOrder = 8
+          OnClick = btnApagarItemClick
         end
         object lkpCliente: TDBLookupComboBox
           Left = 132
@@ -340,6 +341,8 @@ inherited frmVendas: TfrmVendas
           TitleFont.Height = -11
           TitleFont.Name = 'Tahoma'
           TitleFont.Style = []
+          OnCellClick = dbGridItenVendasCellClick
+          OnDblClick = dbGridItenVendasDblClick
           Columns = <
             item
               Expanded = False
